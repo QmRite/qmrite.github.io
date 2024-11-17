@@ -1,136 +1,188 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: #201b2d;
-    font-size: 15px;
-    padding: 0;
-    margin: 0;
-    background-color: #f4f7fc;
+  font-family: "Open Sans", sans-serif;
+  color: #201b2d;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f7fc;
 }
 
-div, p, input, button, form, span, a, ul, li {
-    box-sizing: border-box;
+div,
+p,
+input,
+button,
+form,
+span,
+a,
+ul,
+li {
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 900;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
 }
 
 p {
-    line-height: 1.65em;
+  line-height: 1.65em;
 }
 
-
 .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: linear-gradient(to right, #4f53c6, #459ed3);
-    color: white;
-    padding: 50px;
+  background: linear-gradient(to right, #4f53c6, #459ed3);
+  color: white;
+  padding: 50px;
 }
 
 .logo {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .logo img {
-    height: 30px;
-    display: block;
-    margin: 0 auto;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
 .logo span {
-    font-size: 24px;
-    font-weight: bold;
-    display: block;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
 }
 
 .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro {
+  width: 40%;
 }
 
 .intro h2 {
-    font-size: 22px;
-    text-transform: uppercase;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 .intro h1 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .intro h1 span {
-    font-weight: 900;
+  font-weight: 900;
+}
+
+.image {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 400px;
 }
 
 .cta-button {
-    background-color: yellow;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
+  background-color: yellow;
+  border: none;
+  padding: 15px 60px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .services {
-    text-align: center;
-    padding: 50px 0;
+  text-align: center;
+  padding: 50px 0;
 }
 
 .services h2 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .service-block {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    width: 1024px;
+    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .service h3 {
-    font-size: 18px;
-    margin-top: 10px;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .contact-form {
-    text-align: center;
-    background-color: #d4e4f7;
-    padding: 50px 20px;
+  text-align: center;
+  background-color: #d4e4f7;
+  padding: 50px 20px;
 }
 
 .contact-form h2 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-    background-color: yellow;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
+  background-color: yellow;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 footer {
-    background: linear-gradient(to right, #4f53c6, #459ed3);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+  background: linear-gradient(to right, #4f53c6, #459ed3);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+input.valid {
+  border-color: green;
+}
+input.invalid {
+  border-color: red;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
