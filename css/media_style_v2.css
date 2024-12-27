@@ -1,0 +1,122 @@
+@media (min-width: 769px) {
+  .pr-0 {
+    padding-right: 0;
+  }
+
+  .pl-0 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .w-100_mob {
+    width: 100%;
+  }
+
+  /* news */
+  .news__item {
+    background-image: url('../img/card.png');
+    background-size: 100% 100px;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  /* .news__item_1 {
+    background-image: url('../img/news_item_1.png');
+  }
+
+  .news__item_2 {
+    background-image: url('../img/news_item_2.png');
+  } */
+
+  .news__item__content {
+    padding-top: 132px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .news__item__autor {
+    margin-bottom: 0;
+  }
+
+  /* news card */
+  .news__card-container .news__item__content {
+    padding-top: 32px;
+  }
+
+  .news__card-container .news__item {
+    background-image: none;
+  }
+
+  .comment__container_second {
+    padding-left: 45px;
+  }
+
+  .comment__descr {
+    padding-left: 60px;
+  }
+
+  .comment__like:not(:last-child) {
+    margin-right: 50px;
+  }
+
+
+  /* Books */
+  .bg__books{
+    background-image: url('../img/bg_books_mob.png');
+  }
+  .bg__books_card:before{
+    display: none;
+  }
+  .book__image{
+    background-size: 80%;
+  }
+
+  .book__image_two{
+    background-size: 80%;
+  }
+
+  .book__card:before{
+    display: none;
+  }
+  .feed{
+    width: 100%;
+  }
+  .feed::before{
+    width: 76px;
+    height: 60px;
+    top: -106px;
+    left: 0;
+    background-size: contain;
+  }
+  .feed::after{
+    width: 76px;
+    height: 60px;
+    bottom: -66px;
+    right: 0;
+    background-size: contain;
+  }
+
+  /* Author */
+  .author__bottom{
+    padding-bottom: 40px;
+  }
+  .author__bottom:before{
+    display: none;
+  }
+  .author__aside{
+    padding-left: 0;
+  }
+  .author__aside_two{
+    padding-left: 0;
+  }
+
+  /* Poems */
+  .poem__item{
+    padding: 0%;
+  }
+  .btn__item button{
+    text-align: left;
+  }
+
+}
