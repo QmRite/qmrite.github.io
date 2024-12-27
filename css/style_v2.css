@@ -318,6 +318,7 @@ label p {
   height: 22px;
   border: 1px solid #D73B78;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .agree:checked ~ .checkbox-container .checkbox {
