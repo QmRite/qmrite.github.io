@@ -126,7 +126,7 @@ const getComment = (comment) => {
                        fill="${value.like ? '#F1EDED' : '#8C8596'}"/>
                     </svg>
                     <p>
-                      ${comment.likes + value.like ? 1 : 0}
+                      ${comment.likes + (value.like ? 1 : 0)}
                     </p>
                   </div>
                   <div class="flex ai-c comment__like">
@@ -135,7 +135,7 @@ const getComment = (comment) => {
                       fill="${value.dislike ? '#F1EDED' : '#8C8596'}"/>
                     </svg>
                     <p>
-                      ${comment.dislikes + value.dislike ? 1 : 0}
+                      ${comment.dislikes + (value.dislike ? 1 : 0)}
                     </p>
                   </div>
                 </div>
@@ -246,35 +246,42 @@ const sendComment = () => {
     //   [key]: postId,
     // };
 
-    var emailInput = document.querySelector('input[name="email"]');
     var nameInput = document.querySelector('input[name="name"]');
-
-    var emailValue = emailInput.value;
     var nameValue = nameInput.value;
-
-    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     var namePattern = /^[a-zA-Zа-яА-ЯёЁ\s]{2,}$/;
 
     var isValid = true;
-
-    if (!emailPattern.test(emailValue)) {
-        alert('Пожалуйста, введите корректный адрес электронной почты.');
-        isValid = false;
-    }
-
+    
     if (!namePattern.test(nameValue)) {
         alert('Пожалуйста, введите корректное имя (минимум 2 символа и только буквы).');
         isValid = false;
     }
 
-    if (!isValid) {
-        e.preventDefault();
+    if (postType === 'blog') {
+      const email = formData.get('email');
+
+      var emailInput = document.querySelector('input[name="email"]');
+      var emailValue = emailInput.value;
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(emailValue)) {
+        alert('Пожалуйста, введите корректный адрес электронной почты.');
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert(`Имя: ${name}\nПочта: ${email}\nКомментарий: ${comment}`);
+        form.reset();
+      }
     }
 
-    if (isValid) {
+    if (!isValid) {
+      e.preventDefault();
+    }
+
+    if (isValid && postType === 'news') {
       // Display alert with comment information
       alert(`Имя: ${name}\nКомментарий: ${comment}`);
-      
+      form.reset();
       /*
       try {
         await fetch('http://158.160.45.17:5010/Comment', {
@@ -292,8 +299,6 @@ const sendComment = () => {
         location.reload();
       }
       */
-      
-      form.reset();
     }
   })
 }
@@ -467,4 +472,3 @@ const getTagsAndContent = async () => {
   getContentByTag();
   clearTags();
 }
-
