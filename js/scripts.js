@@ -18,7 +18,7 @@ const getBlogPost = (post) => {
           <div class="row">
             <div class="col-12">
               <div class="br news__item">
-                <div class="news__item__img">
+                <div class="news__item__img" style="text-align: center;">
                   <img src="${post.cover}" alt="Книги на полке">
                   <img class="absolute desktop sky sky_1" src="img/sky_1.png" alt="Облака">
                   <img class="absolute desktop sky sky_2" src="img/sky_2.png" alt="Облака">
@@ -70,7 +70,7 @@ const getNewsPost = (post) => {
         <div class="row">
           <div class="col-12">
             <div class="br news__item">
-              <div class="news__item__img">
+              <div class="news__item__img" style="text-align: center;">
                 <img src="${post.cover}" alt="Книги на полке">
                 <img class="absolute desktop sky sky_1" src="img/sky_1.png" alt="Облака">
                 <img class="absolute desktop sky sky_2" src="img/sky_2.png" alt="Облака">
@@ -79,17 +79,23 @@ const getNewsPost = (post) => {
                 <div>
                   <div class="mb-5 flex jc-sb ai-c fd-cr_mob jc-fs_mob ai-fs_mob">
                     <div class="flex ai-c fd-cr_mob ai-fs_mob">
-                      <h1>${post.title}</h1>
+                      <h1>
+                        ${post.title}
+                      </h1>
                       <ul class="flex ai-c fw-w mb-md-0 mb-4">${tags}</ul>
                     </div>
                     <div class="mb-md-0 mb-3 flex fd-c ai-fe fd-r_mob jc-sb_mob ai-c_mob w-100_mob">
                       <div class="news__item__autor">
                         Евгения Лопес
                       </div>
-                      <div class="news__item__date">${dayjs(post.created).format('DD MMM YYYY HH:mm')}</div>
+                      <div class="news__item__date">
+                      ${dayjs(post.created).format('DD MMM YYYY HH:mm')}
+                      </div>
                     </div>
                   </div>
-                  <p class="news__item__descr">${post.content}</p>
+                    <p class="blog__item__descr">
+                     ${post.content}
+                    </p>
                 </div>
               </div>
             </div>
@@ -309,7 +315,6 @@ const likeOrDislike = async (e, btn) => {
   const type = btn.id;
   const isChecked = bd[id][type];
 
-  // Функция getAction больше не нужна, так как мы не используем HTTP запросы
   // const getAction = (t, c) => t === 'like' ? c ? 'RemoveLike' : 'SetLike' : c ? 'RemoveDislike' : 'SetDislike';
   // const action = getAction(type, isChecked);
   // const url = `http://158.160.45.17:5010/Comment/${action}/${id}`;
@@ -318,14 +323,13 @@ const likeOrDislike = async (e, btn) => {
   const isOppositeChecked = bd[id][oppositeType];
 
   try {
-    // Запросы fetch больше не используются
     // await fetch(url, {method: 'PUT'});
 
-    if (!isChecked && isOppositeChecked) {
+    //if (!isChecked && isOppositeChecked) {
       // const action2 = getAction(oppositeType, isOppositeChecked);
       // const url2 = `http://158.160.45.17:5010/Comment/${action2}/${id}`;
       // await fetch(url2, {method: 'PUT'});
-    }
+    //}
     const value = type === 'like' ?
       isChecked ? {like: false, dislike: false} : {like: true, dislike: false} :
       isChecked ? {like: false, dislike: false} : {like: false, dislike: true};
@@ -472,3 +476,4 @@ const getTagsAndContent = async () => {
   getContentByTag();
   clearTags();
 }
+
