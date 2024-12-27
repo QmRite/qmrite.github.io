@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E1727">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.svg">
+  <link rel="icon" type="Image/x-icon" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant&family=Montserrat:wght@400;500;600&family=Mulish:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style_v2.css">
+  <link rel="stylesheet" href="css/media_style_v2.css">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/ru.js"></script>
+  <script>dayjs.locale('ru')</script>
+  <title>
+    Евгения Лопес&nbsp;| Писатель&nbsp;| Москва
+  </title>
+</head>
+<body class="bg__news">
+<header class="mb-md-5 pt-md-5 mb-3 py-3 header">
+  <div class="container">
+    <div class="row jc-sb_mob ai-c">
+      <div class="col-auto mob">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="ЕЕЛ">
+        </a>
+      </div>
+      <div class="col-md-12 col-auto">
+        <nav>
+          <ul class="flex jc-sa ai-c">
+            <li class="desktop">
+              <a class="nav__link_active" href="news.html">
+                Новости
+              </a>
+            </li>
+            <li class="desktop">
+              <a href="author.html">
+                об&nbsp;авторе
+              </a>
+            </li>
+            <li class="desktop">
+              <a href="books.html">
+                Книги
+              </a>
+            </li>
+            <li class="desktop">
+              <a href="index.html">
+                <img src="img/logo.svg" alt="ЕЕЛ">
+              </a>
+            </li>
+            <li class="desktop">
+              <a href="poems.html">
+                Стихи
+              </a>
+            </li>
+            <li class="desktop">
+              <a href="blog.html">
+                Блог
+              </a>
+            </li>
+            <li class="desktop">
+              <a href="contacts.html">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-auto mob">
+        <button>
+          <svg width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.504395" width="31" height="1" fill="white"></rect>
+            <rect y="6.50439" width="31" height="1" fill="white"></rect>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <ul class="flex ai-c fw-w mulish nav-treck__list">
+            <li class="mb-2 nav-treck__item">
+              <a href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="mb-2 nav-treck__item">
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="4" cy="4" r="4" fill="#F1EDED"/>
+              </svg>
+            </li>
+            <li class="mb-2 nav-treck__item">
+              <a href="news.html">
+                Новости
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>
+            Новости
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto">
+          <ul id="tags" class="flex fw-w fd-c_mob btn__list"></ul>
+        </div>
+      </div>
+      <div class="row news__item-container">
+        <div class="col-12">
+          <ul id="content-container" class="news__list"> </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row jc-sb jc-fs_mob">
+      <div class="col-md-6 col-12 mb-md-0 mb-5">
+        <a href="index.html">
+          <img src="img/logo_white.svg" alt="ЕЕЛ">
+        </a>
+      </div>
+      <div class="col-md-4 col-12">
+        <p class="pt-4 mulish footer__copy">
+          &copy;&nbsp;2024-2025. Все права защищены. Копирование материалов разрешено только с&nbsp;активной ссылкой на&nbsp;источник
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/scripts.js"></script>
+<script>getTagsAndContent();</script>
+</body>
+</html>
